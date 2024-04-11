@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/bg_image"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello John"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/_CCFFFFFF"
+        android:layout_marginTop="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="@+id/clTop"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/roboto_regular"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvExplore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let’s start exploring!"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_9sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        app:layout_constraintStart_toStartOf="@+id/clTop"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/clTop"
+        app:layout_constraintTop_toTopOf="@+id/tvUserName"
+        android:src="@drawable/notification"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_216sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvExplore"
+        android:elevation="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/top_constraint_corner_22dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout2"
+            android:layout_width="wrap_content"
+            style="@style/HomeTabLayout"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabMode="scrollable"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@color/app_color"
+            app:tabGravity="fill"
+            android:textSize="@dimen/_12sdp"
+            app:tabRippleColor="@null"
+            app:tabIndicator="@drawable/custom_tab_width"
+            app:tabIndicatorFullWidth="true"
+            app:tabPaddingStart="@dimen/_12sdp"
+            app:tabPaddingEnd="@dimen/_12sdp"
+            app:tabSelectedTextColor="@color/app_color"
+            app:tabTextColor="@color/_80000000"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_a_location"
+            android:drawableEnd="@drawable/gps"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textSize="@dimen/_8ssp"
+            android:editable="false"
+            android:focusable="false"
+            android:layout_marginTop="@dimen/_16sdp"
+            style="@style/unselected_edittext"
+            android:background="@drawable/edit_text_selector"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+            android:textColorHint="@color/_80000000"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSelectPropertyType"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:hint="Select Property Type"
+                android:drawableEnd="@drawable/down_arrow"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                android:paddingVertical="@dimen/_11sdp"
+                android:paddingStart="@dimen/_11sdp"
+                android:paddingEnd="@dimen/_11sdp"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="@+id/etLocation"
+                android:background="@drawable/edit_text_selector"
+                app:layout_constraintTop_toBottomOf="@+id/etLocation"
+                android:textColorHint="@color/_80000000"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSelectRange"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:hint="Select Property Range"
+                android:drawableEnd="@drawable/dollar"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/_11sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_8ssp"
+                android:paddingVertical="@dimen/_11sdp"
+                android:paddingStart="@dimen/_11sdp"                app:layout_constraintEnd_toEndOf="@+id/etLocation"
+                android:background="@drawable/edit_text_selector"
+                app:layout_constraintTop_toBottomOf="@+id/etLocation"
+                android:textColorHint="@color/_80000000"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/button_style_green"
+            android:text="Search"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@+id/etSelectRange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/green_button_bg"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPopular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Most Popular Searches!"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clTop"
+        android:fontFamily="@font/roboto_bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPopular"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/popular_searches_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvPopular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

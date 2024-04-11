@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/_9sdp"
+    android:paddingHorizontal="@dimen/_18sdp"
+    android:paddingBottom="@dimen/_18sdp"
+    android:background="@drawable/corner_light_white_15dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_9sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/light_green_corner_8dp">
+
+        <TextView
+            android:id="@+id/tvWalletBalanceHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_balance"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/_CC000000"/>
+        <TextView
+            android:id="@+id/tvWalletBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="$9,842"
+            android:textSize="@dimen/_11ssp"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWalletBalanceHeading"
+            app:layout_constraintStart_toEndOf="@+id/tvWalletBalanceHeading"
+            app:layout_constraintTop_toTopOf="@+id/tvWalletBalanceHeading"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cross"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llAddMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/clWallet"
+        app:layout_constraintStart_toStartOf="@+id/clWallet"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_13sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clWallet">
+        <TextView
+            android:id="@+id/tvNotEnoughBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/_CC000000"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintStart_toStartOf="@id/clWallet"
+            app:layout_constraintTop_toBottomOf="@+id/clWallet"
+            android:text="@string/you_don_t_have_enough_balance"/>
+        <TextView
+            android:id="@+id/tvClickToAddBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/app_color"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toEndOf="@+id/tvNotEnoughBalance"
+            android:layout_marginStart="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@+id/clWallet"
+            android:text="@string/click_to_add_money"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPayableAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payable_amount_5_000"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="@dimen/_26sdp"
+        app:layout_constraintTop_toBottomOf="@+id/llAddMoney"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style_green"
+        android:text="@string/pay_now_caps"
+        android:layout_marginTop="@dimen/_28sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayableAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/green_button_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

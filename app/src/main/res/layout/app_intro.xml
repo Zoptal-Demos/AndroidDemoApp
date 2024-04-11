@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_15sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:src="@drawable/logo"/>
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_18sdp"
+        app:dotsColor="@color/dot_unselected_color"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:progressMode="true"
+        android:layout_marginBottom="@dimen/_40sdp"
+        app:selectedDotColor="@color/app_color"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skip"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_18sdp"
+        style="@style/top_heading_text"
+        android:background="@drawable/light_green_corner_15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_indicator"
+        app:layout_constraintTop_toTopOf="@+id/dots_indicator"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_18sdp"
+        style="@style/top_heading_text"
+        android:textColor="@color/white"
+        android:background="@drawable/green_corner_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/dots_indicator"
+        app:layout_constraintTop_toTopOf="@+id/dots_indicator"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style_green"
+        android:text="Get started"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_45sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/green_button_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBackgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/bg_image"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            android:background="@drawable/white_corner_22dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_45sdp"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/let_s_get_started"
+                android:layout_marginTop="@dimen/_34sdp"
+                style="@style/textview_green_28sp"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+                />
+            <TextView
+                android:id="@+id/tvSubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up_your_account_to_quickly_get_started"
+                android:layout_marginTop="@dimen/_10sdp"
+                style="@style/textview_12sp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeading"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:drawableStart="@drawable/user_name"
+            android:drawablePadding="@dimen/_10sdp"
+            style="@style/unselected_edittext"
+            android:background="@drawable/edit_text_selector"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/clTop"
+            android:textColorHint="@color/_80000000"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="@dimen/_10sdp"
+            style="@style/unselected_edittext"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:background="@drawable/edit_text_selector"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/etUserName"
+            android:textColorHint="@color/_80000000"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:passwordToggleEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/etMail">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="@dimen/_10sdp"
+                style="@style/unselected_edittext"
+                android:background="@drawable/edit_text_selector"
+                android:textColorHint="@color/_80000000"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSelectRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Role"
+            android:drawableStart="@drawable/username_2"
+            android:drawablePadding="@dimen/_10sdp"
+            style="@style/unselected_edittext"
+            android:drawableEnd="@drawable/dropdown"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:background="@drawable/edit_text_selector"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout"
+            android:textColorHint="@color/_80000000"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/button_style_green"
+            android:text="Sign Up"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@+id/etSelectRole"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/green_button_bg"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSignInWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or sign Up with"
+            style="@style/textview_12sp"
+            android:textColor="@color/_80000000"
+            android:layout_marginTop="@dimen/_36sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btSignUp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSocialLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_14sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignInWith">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:paddingHorizontal="@dimen/_18sdp"
+                android:background="@drawable/google_login_bg"
+                android:fontFamily="@font/roboto_regular"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableStart="@drawable/google"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvApple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_18sdp"
+                android:background="@drawable/google_login_bg"
+                android:fontFamily="@font/roboto_regular"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableStart="@drawable/apple"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvGoogle"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clSocialLogin"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_9ssp"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textColor="@color/app_color"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

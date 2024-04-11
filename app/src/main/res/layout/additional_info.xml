@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/back_arrow"/>
+
+    <TextView
+        android:id="@+id/tvTopHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Additional Info"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:theme="@style/top_heading_text"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopHeading"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clProfileOpttions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTopHeading"
+            android:background="@drawable/top_constraint_corner_22dp">
+
+            <TextView
+                android:id="@+id/tvBasicInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/basic_information"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/my_properties"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewBasicInfo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvBasicInfo"/>
+
+            <TextView
+                android:id="@+id/tvCoApplicants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/co_applicants"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/my_biddings"
+                app:layout_constraintTop_toBottomOf="@+id/viewBasicInfo"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewCoApplicants"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvCoApplicants"/>
+
+            <TextView
+                android:id="@+id/tvGuarantors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guarantors"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/history"
+                app:layout_constraintTop_toBottomOf="@+id/viewCoApplicants"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewGuarantors"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvGuarantors"/>
+
+            <TextView
+                android:id="@+id/tvPets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pets"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/saved"
+                app:layout_constraintTop_toBottomOf="@+id/viewGuarantors"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewPets"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvPets"/>
+            <TextView
+                android:id="@+id/tvResidenceHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/residence_history"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/about"
+                app:layout_constraintTop_toBottomOf="@+id/viewPets"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewResidenceHistory"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvResidenceHistory"/>
+            <TextView
+                android:id="@+id/tvEmploymentHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/employment_history"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/payment_methods"
+                app:layout_constraintTop_toBottomOf="@+id/viewResidenceHistory"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewEmploymentHistory"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmploymentHistory"/>
+            <TextView
+                android:id="@+id/tvIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/income"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/transaction_history"
+                app:layout_constraintTop_toBottomOf="@+id/viewEmploymentHistory"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewIncome"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvIncome"/>
+            <TextView
+                android:id="@+id/tvReference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/references"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/addtional_info"
+                app:layout_constraintTop_toBottomOf="@+id/viewIncome"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <View
+                android:id="@+id/viewReference"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_view_line"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvReference"/>
+
+            <TextView
+                android:id="@+id/tvVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vehicles"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableEnd="@drawable/next_arrow"
+                android:drawableStart="@drawable/settings"
+                app:layout_constraintTop_toBottomOf="@+id/viewReference"
+                android:fontFamily="@font/roboto_regular"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

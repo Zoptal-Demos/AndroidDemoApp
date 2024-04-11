@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/topLayout"
+        layout="@layout/top_screen_tool" />
+
+    <TextView
+        android:id="@+id/tvSubHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/top_subheading_text"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_47sdp"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        android:text="@string/enter_your_registered_email_address"/>
+
+     <TextView
+         android:id="@+id/tvRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/top_subheading_text"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubHeading"
+        android:text="@string/to_recover_your_account"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEmailRecovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/recover_account"
+        android:layout_marginTop="@dimen/_68sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecovered"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textColorHint="@color/_80000000"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:drawableStart="@drawable/email_2"
+        android:drawablePadding="@dimen/_10sdp"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btSendOtp"
+        android:background="@drawable/edittext_corner_gray_20dp"
+  />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSendOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style_green_outline"
+        android:text="Send OTP"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

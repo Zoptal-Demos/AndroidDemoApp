@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:background="@color/_F8F8F8">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/back_arrow"/>
+
+    <TextView
+        android:id="@+id/tvTopHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_methods_caps"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:theme="@style/top_heading_text"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_13sdp"
+        android:paddingHorizontal="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_21sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopHeading"
+        android:background="@drawable/light_green_corner_8dp">
+
+        <TextView
+            android:id="@+id/tvBiddingAmountHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bidding_amount"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/_CC000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_9ssp"/>
+        <TextView
+            android:id="@+id/tvBiddingAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="($4,500)"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintStart_toEndOf="@+id/tvBiddingAmountHeading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_11ssp"/>
+
+
+        <TextView
+            android:id="@+id/tvPlatformFeeHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/platform_fee_5"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/_CC000000"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvBiddingAmountHeading"
+            android:textSize="@dimen/_9ssp"/>
+        <TextView
+            android:id="@+id/tvPlatformfee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="($225)"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintStart_toEndOf="@+id/tvBiddingAmountHeading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPlatformFeeHeading"
+            android:textSize="@dimen/_11ssp"/>
+
+
+        <TextView
+            android:id="@+id/tvPayableAmountHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payable_amount"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/_CC000000"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlatformFeeHeading"
+            android:textSize="@dimen/_9ssp"/>
+        <TextView
+            android:id="@+id/tvPayableAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="($4,725)"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintStart_toEndOf="@+id/tvPayableAmountHeading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPayableAmountHeading"
+            android:textSize="@dimen/_11ssp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical"
+        tools:itemCount="7"
+        tools:listitem="@layout/card_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/clAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btPay"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style_green"
+        android:text="@string/pay_now"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPayWithWallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/green_button_bg"/>
+
+    <TextView
+        android:id="@+id/tvPayWithWallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/or_pay_via_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <View
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="1dp"
+        android:background="@color/app_color"
+        android:layout_marginBottom="@dimen/_28sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

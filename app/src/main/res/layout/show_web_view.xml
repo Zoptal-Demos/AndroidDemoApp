@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="@dimen/_15sdp">
+
+
+    <include
+        android:id="@+id/topLayout"
+        layout="@layout/top_screen_tool" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/_16sdp"
+        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_morbi_sit_amet_lorem_nec_ante_fermentum_accumsan_eget_varius_elit_pellentesque_habitant_morbi_tristique_senectus_et_netus_et_malesuada_fames_ac_turpis_egestas_lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_integer_laoreet_quam_in_ante_condimentum_vitae_tristique_risus_blandit_in_sed_efficitur_tortor_nullam_quis_justo_tellus_etiam_congue_convallis_enim_ut_ornare_in_hac_habitasse_platea_dictumst_fusce_a_vulputate_purus_at_tempus_tellus_vestibulum_sit_amet_neque_dui_ut_hendrerit_sapien_vitae_finibus_tincidunt_ligula_odio_hendrerit_enim_a_malesuada_eros_mi_non_ante_vivamus_vehicula_lectus_non_mauris_imperdiet_malesuada_duis_nec_feugiat_sem_morbi_mattis_ligula_vel_elementum_facilisis_cras_interdum_enim_et_ante_accumsan_rutrum"
+        android:textColor="@color/_CC000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

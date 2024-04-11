@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/topLayout"
+        layout="@layout/top_screen_tool" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        android:background="@color/white">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/_25sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etFullAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Address"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    style="@style/unselected_edittext"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/edit_text_selector"
+                    android:textColorHint="@color/_80000000"/>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etCity"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp"
+                    android:padding="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_11sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintStart_toStartOf="@+id/etFullAddress"
+                    android:background="@drawable/edit_text_selector"
+                    app:layout_constraintTop_toBottomOf="@+id/etFullAddress"
+                    android:textColorHint="@color/_80000000"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etZipCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Zip Code"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:layout_constraintStart_toEndOf="@+id/etCity"
+                    android:paddingStart="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/etFullAddress"
+                    android:background="@drawable/edit_text_selector"
+                    app:layout_constraintTop_toBottomOf="@+id/etFullAddress"
+                    android:textColorHint="@color/_80000000"/>
+
+                <TextView
+                    android:id="@+id/tvPropertyDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select your location"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="start"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etZipCode"
+                    android:theme="@style/top_heading_text_14dp"/>
+
+                <ImageView
+                    android:id="@+id/ivMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:src="@drawable/map_image"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPropertyDetail"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPropertyDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:hint="Property Description"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    style="@style/unselected_edittext"
+                    android:gravity="start"
+                    android:inputType="text"
+                    app:layout_constraintTop_toBottomOf="@+id/ivMap"
+                    android:background="@drawable/edit_text_selector"
+                    android:textColorHint="@color/_80000000"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPropertyGuidelines"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:hint="Property Guidelines"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    style="@style/unselected_edittext"
+                    android:gravity="start"
+                    android:inputType="text"
+                    app:layout_constraintTop_toBottomOf="@+id/etPropertyDescription"
+                    android:background="@drawable/edit_text_selector"
+                    android:textColorHint="@color/_80000000"/>
+
+                <TextView
+                    android:id="@+id/tvUploadProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="upload property images"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etPropertyGuidelines"
+                    android:theme="@style/top_heading_text_14dp"/>
+                <TextView
+                    android:id="@+id/tvYouCanAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="(You can add maximum 40 images)"
+                    android:gravity="start"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/_FF3F4D"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvUploadProperty"
+                    app:layout_constraintTop_toTopOf="@+id/tvUploadProperty"
+                    app:layout_constraintStart_toEndOf="@+id/tvUploadProperty"
+                    android:fontFamily="@font/roboto_regular"
+                    />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvUploadProperty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/upload_property_item"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUploadProperty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/button_style_green"
+                    android:text="@string/submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/rvUploadProperty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/green_button_bg"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

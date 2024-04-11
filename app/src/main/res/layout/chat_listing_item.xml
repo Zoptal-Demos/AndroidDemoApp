@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_13sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/CircleImageViewStyle"
+        android:src="@drawable/profile_img_male" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/ivUserImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="John Doe"
+        android:includeFontPadding="false"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintEnd_toStartOf="@+id/tvTime"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="@+id/ivUserImage"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11ssp"/>
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="2 min ago"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="@+id/ivUserImage"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/_80000000"
+        android:textSize="@dimen/_8ssp"/>
+    <TextView
+        android:id="@+id/tvForSaleOrRent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Flat For Sale"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@+id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/_B3000000"
+        android:textSize="@dimen/_9ssp"/>
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/tvTime"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="@+id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tvForSaleOrRent"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/_B3000000"
+        android:textSize="@dimen/_8ssp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/_view_line"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

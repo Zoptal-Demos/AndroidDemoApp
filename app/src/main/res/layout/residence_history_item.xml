@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_15sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_9sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/top_constraint_corner_22dp">
+
+        <TextView
+            android:id="@+id/tvCurrentAddressHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/current_address"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/top_heading_text_14dp"/>
+        <TextView
+            android:id="@+id/tvCurrentAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="21 abc road New Jersey, NJ 20202, USA"
+            android:gravity="start"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentAddressHeading"
+            android:layout_marginTop="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/textview_12sp"/>
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/edit"/>
+
+
+        <TextView
+            android:id="@+id/tvLivedHereHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/i_lived_here_for"
+            android:layout_marginTop="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentAddress"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/top_heading_text_14dp"/>
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2 years, 3 months"
+            android:gravity="start"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintTop_toBottomOf="@+id/tvLivedHereHeading"
+            android:layout_marginTop="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/textview_12sp"/>
+        <TextView
+            android:id="@+id/tvTypeHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:layout_marginTop="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDuration"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/top_heading_text_14dp"/>
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rental"
+            android:gravity="start"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintTop_toBottomOf="@+id/tvTypeHeading"
+            android:layout_marginTop="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/textview_12sp"/>
+        <TextView
+            android:id="@+id/tvLandlordHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/landlord"
+            android:layout_marginTop="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvType"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/top_heading_text_14dp"/>
+        <TextView
+            android:id="@+id/tvLandlordName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Glenn Maxwell"
+            android:gravity="start"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintTop_toBottomOf="@+id/tvLandlordHeading"
+            android:layout_marginTop="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/textview_12sp"/>
+        <TextView
+            android:id="@+id/tvRentHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rent"
+            android:layout_marginTop="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvLandlordName"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/top_heading_text_14dp"/>
+        <TextView
+            android:id="@+id/tvRentAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="$1500"
+            android:gravity="start"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintTop_toBottomOf="@+id/tvRentHeading"
+            android:layout_marginTop="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/textview_12sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

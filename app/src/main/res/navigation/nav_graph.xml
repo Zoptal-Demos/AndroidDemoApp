@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
+
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.zoptal.munzul.view.authentication.fragments.Splash"
+        android:label="Splash"
+        tools:layout="@layout/splash">
+        <action
+            android:id="@+id/action_splash_to_introFragment"
+            app:destination="@id/introFragment"
+            app:popUpTo="@id/splash"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.zoptal.munzul.view.authentication.fragments.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/app_intro">
+
+        <action
+            android:id="@+id/action_introFragment_to_signUp"
+            app:destination="@id/signUp"
+            app:popUpTo="@+id/splash"
+            app:popUpToInclusive="true"/>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.zoptal.munzul.view.authentication.fragments.SignIn"
+        android:label="SignIn"
+        tools:layout="@layout/sign_in">
+        <action
+            android:id="@+id/action_signIn_to_recoverYourAccount"
+            app:destination="@id/recoverYourAccount"
+            />
+        <action
+            android:id="@+id/action_signIn_to_signUp"
+            app:destination="@id/signUp"
+            app:popUpTo="@+id/splash"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/recoverYourAccount"
+        android:name="com.zoptal.munzul.view.authentication.fragments.RecoverYourAccount"
+        android:label="RecoverYourAccount"
+        tools:layout="@layout/recover_your_account">
+        <action
+            android:id="@+id/action_recoverYourAccount_to_verifyOtp"
+            app:destination="@id/verifyOtp"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtp"
+        android:name="com.zoptal.munzul.view.authentication.fragments.VerifyOtp"
+        android:label="VerifyOtp"
+        tools:layout="@layout/verify_otp">
+        <action
+            android:id="@+id/action_verifyOtp_to_setNewPassword"
+            app:destination="@id/setNewPassword"
+            app:popUpTo="@+id/recoverYourAccount"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.zoptal.munzul.view.authentication.fragments.SignUp"
+        android:label="SignUp"
+        tools:layout="@layout/sign_up">
+        <action
+            android:id="@+id/action_signUp_to_signIn"
+            app:destination="@id/signIn"
+            app:popUpTo="@+id/splash"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_signUp_to_verifyOtp"
+            app:destination="@id/verifyOtp"
+            app:popUpTo="@+id/splash"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/setNewPassword"
+        android:name="com.zoptal.munzul.view.authentication.fragments.SetNewPassword"
+        android:label="SetNewPassword" >
+        <action
+            android:id="@+id/action_setNewPassword_to_signIn"
+            app:destination="@id/signIn"
+            app:popUpTo="@+id/setNewPassword"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+</navigation>

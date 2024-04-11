@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/topLayout"
+        layout="@layout/top_screen_tool" />
+
+    <TextView
+        android:id="@+id/tvSubHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/top_subheading_text"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_47sdp"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        android:text="@string/please_enter_the_one_time_password"/>
+
+    <TextView
+        android:id="@+id/tvSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/top_subheading_text"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubHeading"
+        android:text="@string/we_sent_on_your_email_id"/>
+
+    <com.mukesh.mukeshotpview.mukeshOtpView.MukeshOtpView
+        android:id="@+id/customOtpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:inputType="number"
+        android:text="1234"
+        app:itemWidth="@dimen/_58sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSent"
+        android:itemBackground="@drawable/gray_round_corners"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:lineColor="@color/_80000000"
+        app:state_filled="true"
+        app:viewType="none"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style_green"
+        android:text="@string/submit"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_65sdp"
+        app:layout_constraintTop_toBottomOf="@+id/customOtpView"
+        android:background="@drawable/green_button_bg"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btResend"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/resend_again"
+        android:drawableEnd="@drawable/retry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="@dimen/_15sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_11sdp"
+        android:textAllCaps="false"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_12ssp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/btSubmit"
+        android:background="@drawable/edittext_corner_green_20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

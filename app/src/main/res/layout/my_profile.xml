@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/_15sdp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/back_arrow"/>
+
+    <TextView
+        android:id="@+id/tvTopHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profile"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:theme="@style/top_heading_text"/>
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/edit"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_26sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopHeading"
+        android:src="@drawable/profile_img_male"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivFrame"
+        android:layout_width="@dimen/_77sdp"
+        android:layout_height="@dimen/_77sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUserImage"
+        app:layout_constraintTop_toTopOf="@+id/ivUserImage"
+        android:src="@drawable/yellow_circle"/>
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Jane Doe"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserImage"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:theme="@style/top_heading_text"/>
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="janedoe@email.com"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/_B3000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:background="@color/_view_line"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLine"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvProfileDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Profile Details"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:gravity="start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:theme="@style/top_heading_text_14dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_13sdp"
+                android:paddingHorizontal="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvProfileDetail"
+                android:background="@drawable/top_constraint_corner_22dp">
+                <TextView
+                    android:id="@+id/tvAboutHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="start"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/top_heading_text_14dp"/>
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                    android:gravity="start"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAboutHeading"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/textview_12sp"/>
+
+                <TextView
+                    android:id="@+id/tvPhoneNumberHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAbout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/top_heading_text_14dp"/>
+                <TextView
+                    android:id="@+id/tvPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="+1 (234) 567 8920"
+                    android:gravity="start"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumberHeading"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/textview_12sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvRoleHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Role"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/top_heading_text_14dp"/>
+                <TextView
+                    android:id="@+id/tvRole"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Agent"
+                    android:gravity="start"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRoleHeading"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/textview_12sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvLicenseNumberHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Real Estate License Number"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRole"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/top_heading_text_14dp"/>
+                <TextView
+                    android:id="@+id/tvLicenseNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="XX-00000-XX"
+                    android:gravity="start"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLicenseNumberHeading"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/textview_12sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvAddressHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLicenseNumber"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/top_heading_text_14dp"/>
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="New Jersey, Mexico"
+                    android:gravity="start"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddressHeading"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/textview_12sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvReferralCodeHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Referral Code"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/top_heading_text_14dp"/>
+                <TextView
+                    android:id="@+id/tvReferralCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="LLGLTG8WPLHU6N"
+                    android:gravity="start"
+                    app:layout_constraintTop_toBottomOf="@+id/tvReferralCodeHeading"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:theme="@style/textview_12sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

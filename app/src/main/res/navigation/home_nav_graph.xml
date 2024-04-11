@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.zoptal.munzul.view.home.fragments.Home"
+        android:label="Home"
+        tools:layout="@layout/home"/>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.zoptal.munzul.view.profile.fragments.Profile"
+        android:label="Profile"
+        tools:layout="@layout/profile">
+        <action
+            android:id="@+id/action_profile_to_myProfile"
+            app:destination="@id/myProfile" />
+        <action
+            android:id="@+id/action_profile_to_myProperties"
+            app:destination="@id/myProperties" />
+        <action
+            android:id="@+id/action_profile_to_myBiddings"
+            app:destination="@id/myBiddings" />
+        <action
+            android:id="@+id/action_profile_to_myHistory"
+            app:destination="@id/myHistory" />
+        <action
+            android:id="@+id/action_profile_to_walletHistory"
+            app:destination="@id/walletHistory" />
+        <action
+            android:id="@+id/action_profile_to_additionalInformation"
+            app:destination="@id/additionalInformation" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatList"
+        android:name="com.zoptal.munzul.view.chatList.fragments.ChatList"
+        android:label="ChatList"
+        tools:layout="@layout/chat_listing"/>
+    <fragment
+        android:id="@+id/discover"
+        android:name="com.zoptal.munzul.view.discover.fragments.Discover"
+        android:label="Discover"
+        tools:layout="@layout/discover"/>
+    <fragment
+        android:id="@+id/addProperty"
+        android:name="com.zoptal.munzul.view.addProperty.fragments.AddProperty"
+        android:label="AddProperty"
+        tools:layout="@layout/add_property">
+        <action
+            android:id="@+id/action_addProperty_to_listYourPropertyStepFirst"
+            app:destination="@id/listYourPropertyStepFirst" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfile"
+        android:name="com.zoptal.munzul.view.profile.fragments.MyProfile"
+        android:label="MyProfile"
+        tools:layout="@layout/my_profile">
+        <action
+            android:id="@+id/action_myProfile_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.zoptal.munzul.view.profile.fragments.EditProfile"
+        android:label="EditProfile"
+        tools:layout="@layout/edit_profile"/>
+    <fragment
+        android:id="@+id/myProperties"
+        android:name="com.zoptal.munzul.view.profile.fragments.MyProperties"
+        android:label="MyProperties"
+        tools:layout="@layout/my_properties"/>
+    <fragment
+        android:id="@+id/myBiddings"
+        android:name="com.zoptal.munzul.view.profile.fragments.MyBiddings"
+        android:label="MyBiddings"
+        tools:layout="@layout/my_biddings"/>
+    <fragment
+        android:id="@+id/myHistory"
+        android:name="com.zoptal.munzul.view.profile.fragments.MyHistory"
+        android:label="MyHistory" />
+    <fragment
+        android:id="@+id/walletHistory"
+        android:name="com.zoptal.munzul.view.profile.fragments.WalletHistory"
+        android:label="WalletHistory" />
+    <fragment
+        android:id="@+id/listYourPropertyStepFirst"
+        android:name="com.zoptal.munzul.view.addProperty.fragments.ListYourPropertyStepFirst"
+        android:label="ListYourPropertyStepFirst"
+        tools:layout="@layout/list_your_property_first">
+        <action
+            android:id="@+id/action_listYourPropertyStepFirst_to_listYourPropertyStepSecond"
+            app:destination="@id/listYourPropertyStepSecond" />
+    </fragment>
+    <fragment
+        android:id="@+id/listYourPropertyStepSecond"
+        android:name="com.zoptal.munzul.view.addProperty.fragments.ListYourPropertyStepSecond"
+        android:label="ListYourPropertyStepSecond"
+        tools:layout="@layout/list_your_property_second"/>
+    <fragment
+        android:id="@+id/additionalInformation"
+        android:name="com.zoptal.munzul.view.additionalInfo.fragments.AdditionalInformation"
+        android:label="AdditionalInformation"
+        tools:layout="@layout/additional_info"/>
+</navigation>

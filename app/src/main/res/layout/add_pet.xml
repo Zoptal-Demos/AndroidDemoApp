@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/_9sdp"
+    android:paddingHorizontal="@dimen/_18sdp"
+    android:paddingBottom="@dimen/_18sdp"
+    android:background="@drawable/corner_light_white_15dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/add_pets"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cross"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textPersonName|textCapWords"
+        android:layout_marginTop="@dimen/_18sdp"
+        style="@style/unselected_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:background="@drawable/edit_text_selector"
+        android:textColorHint="@color/_80000000"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/weight"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="@dimen/_12sdp"
+        style="@style/unselected_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        android:background="@drawable/edit_text_selector"
+        android:textColorHint="@color/_80000000"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_description"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/_12sdp"
+        style="@style/unselected_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/etWeight"
+        android:background="@drawable/edit_text_selector"
+        android:textColorHint="@color/_80000000"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button_style_green"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/green_button_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

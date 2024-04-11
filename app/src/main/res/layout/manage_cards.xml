@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="@dimen/_15sdp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/back_arrow"/>
+
+    <TextView
+        android:id="@+id/tvTopHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_cards"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:theme="@style/top_heading_text"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopHeading"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCard"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                tools:itemCount="3"
+                tools:listitem="@layout/card_item"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tvTopHeading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/tvAddCardHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add_new_card"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvCard"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:theme="@style/top_heading_text"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etCardHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/card_holder_name"
+                android:layout_marginTop="@dimen/_18sdp"
+                style="@style/unselected_edittext"
+                android:gravity="start"
+                android:inputType="textPersonName|textCapWords"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddCardHeading"
+                android:background="@drawable/edit_text_selector"
+                android:textColorHint="@color/_80000000"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/card_number"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:inputType="number"
+                style="@style/unselected_edittext"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/etCardHolderName"
+                android:background="@drawable/edit_text_selector"
+                android:textColorHint="@color/_80000000"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etExpireDate"
+                android:layout_width="@dimen/_135sdp"
+                android:layout_height="wrap_content"
+                android:hint="@string/expire_date"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:inputType="number"
+                android:backgroundTint="@color/white"
+                android:padding="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_11sdp"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintEnd_toStartOf="@+id/etCvv"
+                app:layout_constraintStart_toStartOf="@+id/etCardNumber"
+                android:background="@drawable/edit_text_selector"
+                app:layout_constraintTop_toBottomOf="@+id/etCardNumber"
+                android:textColorHint="@color/_80000000"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etCvv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/cvv"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:padding="@dimen/_12sdp"
+                android:inputType="number"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textSize="@dimen/_11ssp"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:layout_constraintStart_toEndOf="@+id/etExpireDate"
+                android:paddingStart="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/edit_text_selector"
+                app:layout_constraintTop_toBottomOf="@+id/etCardNumber"
+                android:textColorHint="@color/_80000000"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btAddCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/button_style_green"
+                android:text="@string/add_card"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_27sdp"
+                app:layout_constraintTop_toBottomOf="@+id/etCvv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/green_button_bg"/>
+
+            <CheckBox
+                android:id="@+id/cbMinor"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/_CC000000"
+                android:text="@string/save_this_card_for_future_use"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btAddCard"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
